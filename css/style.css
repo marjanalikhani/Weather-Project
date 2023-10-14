@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(../images/alps-01.jpg) no-repeat center center /cover;
+    height: 100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.container {
+    width: 350px;
+    height: 500px;
+    padding: 24px;
+    text-align: center;
+    border-radius: 5px;
+    margin-top: 10px;
+    background-color:white;
+}
+.search {
+    display: flex;
+    padding-top: 15px;
+}
+
+input {
+    width: 200px;
+    padding: 15px;
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+    font-size: 20px;
+    background-color:rgb(174,228,255);
+}
+
+button {
+    width:100px;
+    height: 38px;
+    border-radius: 4px;
+    border: none;
+    font-size: 20px;
+    background-color: rgb(174,228,255);
+    margin-left: 5px;
+}
+
+.city {
+    margin-top: 30px;
+    font-size: 40px;
+}
+
+.temp {
+    font-size: 40px;
+    margin-top: -30px;
+}
+
+.typeWeather {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+img {
+    width: 210px;
+    margin-top: -22px;
+}
