@@ -4,7 +4,7 @@ let city=document.querySelector('.city');
 let image=document.querySelector('img');
 let temp=document.querySelector('.temp');
 let typew=document.querySelector('.typeWeather');
-
+let container=document.querySelector('.container');
 
 
 let API_key = "9916c103761beddef473b2673515ac73";
@@ -50,8 +50,10 @@ let API_key = "9916c103761beddef473b2673515ac73";
 
 
  btn.addEventListener('click', ()=>{
+    container.classList.add('color');
 
    Weather(inp.value);
+
  })
 
 
