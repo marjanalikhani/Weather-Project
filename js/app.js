@@ -58,7 +58,6 @@ btn.addEventListener('click', () => {
     container.classList.add('color');
     Weather(inp.value);
 
-
     let result = Weather(inp.value);
 
 

@@ -9,8 +9,7 @@ body {
     height: 100vh;
     font-family: sans-serif;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .container {
@@ -33,7 +32,6 @@ body {
     text-align: center;
     border-radius: 5px;
     margin-top: 10px;
-
 }
 
 .search {
