@@ -48,6 +48,8 @@ input {
     background-color: rgb(174, 228, 255);
 }
 
+
+
 button {
     width: 100px;
     height: 38px;
@@ -74,25 +76,19 @@ button {
 }
 
 
-
-
-
-
 img {
     width: 150px;
     margin-top: 20px;
     margin-bottom: 40px;
 
     position: relative;
-    animation-name: example;
+    animation-name: anima;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 
 
-
-
-@keyframes example {
+@keyframes anima {
     0% {
         left: 0px;
         top: 0px;
