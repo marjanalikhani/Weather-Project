@@ -6,9 +6,11 @@ let temp = document.querySelector('.temp');
 let typew = document.querySelector('.typeWeather');
 let container = document.querySelector('.container');
 let err = document.querySelector('.err');
+let errimg=document.querySelector('.errimg');
 
 let API_key = "9916c103761beddef473b2673515ac73";
 inp.focus();
+
 
 //------------------------ Weather Function-------------------
 
@@ -49,6 +51,7 @@ async function Weather(search) {
 
 
 btn.addEventListener('click', () => {
+    errimg.src = "";
 
     err.innerHTML = "";
 
@@ -64,10 +67,11 @@ btn.addEventListener('click', () => {
         city.innerHTML = "";
         temp.innerHTML = "";
         typew.innerHTML = "";
-        image.src = "";
+        image.src="";
+        errimg.src = "../images/error.png";
         err.innerHTML = "No Result Found";
 
-    })
+    });
 
     inp.value = "";
 
@@ -75,9 +79,11 @@ btn.addEventListener('click', () => {
 
 
 
+//------------------------ Enter key Search -------------------
 
 
 inp.addEventListener("keypress", function (event) {
+    errimg.src = "";
 
     if (event.key === "Enter") {
         err.innerHTML = "";
@@ -95,12 +101,12 @@ inp.addEventListener("keypress", function (event) {
             temp.innerHTML = "";
             typew.innerHTML = "";
             image.src = "";
+            errimg.src = "../images/error.png";
             err.innerHTML = "No Result Found";
 
         })
 
         inp.value = "";
-        // event.preventDefault();
 
     }
 });
