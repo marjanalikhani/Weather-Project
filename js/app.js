@@ -5,10 +5,10 @@ let image = document.querySelector('img');
 let temp = document.querySelector('.temp');
 let typew = document.querySelector('.typeWeather');
 let container = document.querySelector('.container');
-let err=document.querySelector('.err');
+let err = document.querySelector('.err');
 
 let API_key = "9916c103761beddef473b2673515ac73";
-
+inp.focus();
 
 //------------------------ Weather Function-------------------
 
@@ -49,23 +49,24 @@ async function Weather(search) {
 
 
 btn.addEventListener('click', () => {
-    err.innerHTML="";
+
+    err.innerHTML = "";
 
     container.classList.add('color');
     Weather(inp.value);
 
 
-    let result =   Weather(inp.value);
+    let result = Weather(inp.value);
 
 
-    result.catch(function erro(){
+    result.catch(function erro() {
 
-        city.innerHTML ="";
+        city.innerHTML = "";
         temp.innerHTML = "";
-        typew.innerHTML ="";
-        image.src="";
-        err.innerHTML="No Result Found";
-    
+        typew.innerHTML = "";
+        image.src = "";
+        err.innerHTML = "No Result Found";
+
     })
 
     inp.value = "";
@@ -76,10 +77,33 @@ btn.addEventListener('click', () => {
 
 
 
+inp.addEventListener("keypress", function (event) {
+
+    if (event.key === "Enter") {
+        err.innerHTML = "";
+
+        container.classList.add('color');
+        Weather(inp.value);
 
 
-   
+        let result = Weather(inp.value);
 
+
+        result.catch(function erro() {
+
+            city.innerHTML = "";
+            temp.innerHTML = "";
+            typew.innerHTML = "";
+            image.src = "";
+            err.innerHTML = "No Result Found";
+
+        })
+
+        inp.value = "";
+        // event.preventDefault();
+
+    }
+});
 
 
 
